@@ -3,7 +3,7 @@ import sys
 import pygame_menu
 
 
-
+from menu import *
 from settings import *
 from map import *
 from player import *
@@ -31,6 +31,7 @@ class Game:
 
 
     def new_game(self):
+        self.menu = menu(self)
         self.map = Map(self)
         self.player = Player(self)
         self.object_renderer = ObjectRenderer(self)
@@ -73,7 +74,7 @@ class Game:
             self.update()
             self.draw()
     
-    def start_the_game(self):
+    def menu(self):
         pass
     
 
